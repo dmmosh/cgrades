@@ -1,9 +1,15 @@
-#pragma once
+#pragma once 
 #include <iostream>
-#include <memory>
+#include <cstdlib>
 #include <vector>
 #include <string>
+#include <string.h>
+#include <fstream>
+#include <filesystem>
+#include <cstdio>
+#include <stdexcept>
 #include <array>
+#define N '\n'
 
 
 class terminal{
