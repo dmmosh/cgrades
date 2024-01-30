@@ -22,7 +22,7 @@ class terminal{
     template<typename T>
     terminal operator<<(const T &output){
         std::system(output);
-
+        return *this;
     }
 
     // INPUT FROM TERMINAL
