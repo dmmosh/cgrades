@@ -4,7 +4,7 @@
 CGRADES
 
 grades calculator tool for canvas
-(cd ~/coding/cgrades; git-cl main.cpp utils.cpp -o ./out)
+(cd ~/coding/cgrades; git-cl main.cpp utils.cpp -o out)
 
 */
 int main() {
