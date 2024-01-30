@@ -29,7 +29,7 @@ class terminal{
     template<typename T>
     terminal operator>>(T& input){
         std::array<char, 128> buffer;
-        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
+        std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(input, "r"), pclose);
         if (!pipe) {
             throw std::runtime_error("popen() failed!");
         }
