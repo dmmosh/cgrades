@@ -15,7 +15,7 @@ class terminal{
     // PRINT INTO TERMINAL
     template<typename T>
     terminal operator<<(const T &output){
-        std::system(std::to_string(output).c_str());
+        std::system(output.c_str());
 
     }
 
@@ -39,4 +39,4 @@ class terminal{
         input = result;
     }
 
-}
+};
