@@ -23,7 +23,6 @@ class terminal{
     template<typename T>
     terminal operator>>(T& input){
         std::array<char, 128> buffer;
-        T result;
         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
         if (!pipe) {
             throw std::runtime_error("popen() failed!");
@@ -31,12 +30,11 @@ class terminal{
         while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
             if (typeid(T) == typeid(std::string))
             {
-                result += buffer.data();
+                input += buffer.data();
             } else {
-            result = buffer.data();
+            input = buffer.data();
             }
         }
-        input = result;
     }
 
 };
