@@ -8,7 +8,9 @@ grades calculator tool for canvas
 
 */
 int main() {
-    
+    terminal out;
+
+    out << "echo hello";
 
     std::cout<<"hi";
 }
